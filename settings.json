@@ -1,0 +1,44 @@
+{
+    "editor.formatOnSave": true,
+    //fontsize
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    //wrap
+    "editor.wordWrap": "on", // on:画面の端で折り返す
+    "files.trimTrailingWhitespace": true, // true:行末の空白の削除、markdownで困ることがあるらしい
+    //ミニマップ(編集中のファイルにおいて現在表示している部分がどこに相当するか)
+    "editor.minimap.enabled": false,
+    //bookmark(任意のファイルの任意の行を選択できる機能)をsidebarに表示する
+    "bookmarks.treeview.visible": true,
+    //twigとvueでも有効にします
+    "emmet.includeLanguages": {
+        "twig": "html",
+        "vue-html": "html"
+    },
+    // システムのclipboardにコピー
+    "vim.useSystemClipboard": true,
+    // 検索に:を入れる
+    "vim.cmdLineInitialColon": true,
+    "vim.hlsearch": true,
+    // 言わずもがなeasymotion
+    "vim.easymotion": true,
+    // カーソル上にあるワードを"*"で検索
+    "vim.visualstar": true,
+    // 諸々のctrlキーを使った操作が有効になる
+    "vim.useCtrlKeys": true,
+    // terminalをWSLに切り替えるための設定
+    "files.autoSave": "afterDelay",
+    "files.eol": "\n",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    // 競技プログラミングでc++のテストを行うための設定
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        // 自分で実行したいコマンドを設定する
+        // $dir, $fileNameはそれぞれ編集中のファイルのディレクトリ、ファイル名を表す
+        "cpp": "cd $dir && g++ -O0 -std=c++14 -D_MY_DEBUG -D_GLIBCXX_DEBUG $fileName && ./a.out < input.txt",
+    },
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.preserveFocus": false,
+    "code-runner.ignoreSelection": true,
+    "code-runner.terminalRoot": "/mnt/", // terminalをwslにしている場合はPATHがUBUNTUになっているので必要
+}
